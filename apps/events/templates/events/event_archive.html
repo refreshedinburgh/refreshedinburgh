@@ -3,8 +3,8 @@
 {% block content %}
 	{% for event in upcoming_events %}
 		<h2><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
-		<p>{{ event.date|date }}</p>
 		<p>
+			{{ event.date|date }} —
 			{% if event.location.url %}
 				<a href="{{ event.url }}">{{ event.location.name }}</a>
 			{% else %}
@@ -19,11 +19,13 @@
 	{% endfor %}
 
 	{% if past_events %}
-		<h3>Past events</h3>
-		<ul>
-			{% for event in past_events %}
-				<li><a href="{{ event.get_absolute_url }}">{{ event.title }}</a>, {{ event.date|date }}, {{ event.location }}</hli>
-			{% endfor %}
-		</ul>
+		<div id="pastevents">
+			<h3>Past events</h3>
+			<ul>
+				{% for event in past_events %}
+					<li><a href="{{ event.get_absolute_url }}">{{ event.title }}</a>, {{ event.date|date }}, {{ event.location }}</hli>
+				{% endfor %}
+			</ul>
+		</div>
 	{% endif %}
 {% endblock %}

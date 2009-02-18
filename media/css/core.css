@@ -230,6 +230,12 @@ ul.social-buttons li {
 	text-shadow: 2px 2px 2px #333;
 }
 
+#content #pastevents h3 {
+	font: 1.4em Cambria, Georgia, Times, serif;
+	margin-bottom: 1.1em;
+	text-shadow: 2px 2px 2px #333;
+}
+
 #content p {
 	margin-bottom: 1.1em;
 	line-height: 1.4em;

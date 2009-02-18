@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h2><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
-	<p>{{ event.date|date }}</p>
+	<h2>{{ event.title }}</h2>
 	<p>
+		{{ event.date|date }} —
 		{% if event.location.url %}
 			<a href="{{ event.url }}">{{ event.location.name }}</a>
 		{% else %}
