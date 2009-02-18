@@ -1,6 +1,6 @@
 #!/bin/bash
 PD=`dirname $0`
-PROJECT_NAME=sneeu
+PROJECT_NAME=refreshedinburgh
 DJANGO_DIR=./lib
 
 export PYTHONPATH=$PD:$DJANGO_DIR
