@@ -27,7 +27,7 @@ EMAIL_SUBJECT_PREFIX = '[Refresh Edinburgh] '
 
 ROOT_URLCONF = 'urls'
 
-USE_ETAGS = True
+USE_ETAGS = False
 
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'media/')
 MEDIA_URL = '/media/'
@@ -52,7 +52,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.middleware.cache.CacheMiddleware',
     'django.middleware.gzip.GZipMiddleware',
 )
 
