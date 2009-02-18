@@ -1,1 +1,309 @@
-/* CSS for Refreshedinburgh.org by Nonimage.com - January 2009 */@import "reset.css";/* GLOBAL */body {	background: #396b0a url('../img/layout/mainbg.jpg') top center no-repeat;	font: 15px Helvetica, Arial, Verdana, sans-serif; 		color: #fff;	border-top: 8px solid #a2b935;}/* LINKS */a img,:link img,:visited img { border:none }.clear {		clear: both;}a, a:visited {	color: #fcea78;	text-decoration: none;	font-weight: bold;}a:hover {		color: #fcf5cc;	text-decoration: underline;}ul.social-buttons li a {	color: #fff;}ul.social-buttons li a:hover {	color: #000;	text-decoration: none;}#footer a {	color: #fff;}/* HEADER */#header {	margin: 24px 0 0 0;}h1 {	margin: 0 0 0 -5px;	display: inline;	float: left;	width: 362px;}/* MENU */ul#main-menu {	display: inline;	float: right;	border-bottom: 3px solid #a2b935;	padding-bottom: 11px;	margin-top: 17px;} ul#main-menu li {	display: inline;	float: right;	margin-left: 69px;}  ul#main-menu li.first {	margin-left: 0;}ul#main-menu li a:hover {	color: #000;	text-decoration: none;}/* MAIN STRUCTURE */#page {	width: 940px;	margin: 0 auto;}#main {	padding-top: 67px;	position: relative;}#content {	width: 520px;	display: inline;	float: left;}/* SIDEBAR */#sidebar {	width: 340px;	display: inline;	float: right;}#sidebar h2 {	font: 1.7em Cambria, Georgia, Times, serif; 		margin: 25px 0 0.7em 0;	text-shadow: 2px 2px 2px #333;}#sidebar small {	font-size: 0.5em;}#sidebar ul li {	border-bottom: 1px solid #a2b935;	padding-bottom: 10px;	margin-bottom: 10px;}/* SIDEBAR - SOCIAL AREA */#socialarea {	background: #a2b935 url('../img/layout/socialbg.jpg') top center no-repeat;	padding: 5px 18px 18px 18px;	-webkit-border-radius: 15px;	-khtml-border-radius: 15px;		-moz-border-radius: 15px;	border-radius: 15px;}#socialarea h2 {	font-size: 1.3em; 		margin: 15px 0 0.6em 0;	color: #396b0a;	font-weight: bold;	text-shadow: none;}.mailaddress {	background: transparent url('../img/layout/signupbg-trans.png') top left no-repeat;	border: 0;	height: 32px;	padding: 10px 0 0 8px;	color: #396b0a;	font-size: 0.8em;	width: 217px;}@media screen and (-webkit-min-device-pixel-ratio:0){	/* Safari hack */	.mailaddress {padding: 2px 0 0 8px;}}.joinbutton {	background: transparent url('../img/layout/joinbutton-trans.png') top left no-repeat;	height: 32px;	border: 0;	font-weight: bold;	color: #fff;	margin: 2px 0 0 -5px;	width: 79px;	text-align: center;	font-size: 1em;}h2 span {	font-weight: normal;}ul.social-buttons {	width: 324px;	margin-left: -10px;}ul.social-buttons li {	display: inline;	float: left;	width: 125px;	height: 21px;	background-color: #5d951f;	margin: 0 0 10px 10px;	padding: 10px;	-webkit-border-radius: 5px;	-khtml-border-radius: 5px;		-moz-border-radius: 5px;	border-radius: 5px;	border: 1px solid #508617;}.social-icon {	margin: 0 10px -6px 0;}/* FOOTER */#footer {	width: 100%;	background-color: #a2b935;	padding: 9px 0;	font-size: 0.8em;	text-align: center;	margin-top: 30px;	color: #396b0a;}#footer p {	margin-bottom: 0.35em;	line-height: 1.4em;}/* MAIN TYPOGRAPHY */#content h2 {	font: 1.7em Cambria, Georgia, Times, serif; 		margin-bottom: 1.1em;	text-shadow: 2px 2px 2px #333;}#content p {	margin-bottom: 1.1em;	line-height: 1.4em;	font-size: 1.1em;}/* FRONT PAGE - MAIN BODY TEXT */h2.when, h2.who {	margin-top: 60px;}/* FRONT PAGE - EVENTS */.vevent {	border-bottom: 1px solid #a2b935;	padding-bottom: 15px;	margin-bottom: 15px;}.date, h3.summary, .location {	float: left;	display: inline;}.date {	width: 140px;	margin-right: 20px;	font-size: 0.9em;}h3.summary {	width: 220px;	margin-right: 20px;}.location {}.seeall {	font-size: 0.8em;	font-weight: normal;}/* FRONT PAGE - MEMBERS LIST */ul#members-list {	width: 700px;	margin: 0 0 15px -20px;}ul#members-list li {	display: inline;	float: left;	width: 160px;	margin: 0 0 15px 20px;	font-size: 0.9em;}ul#members-list li a {	font-weight: normal;}.favicon {	margin: 0 10px -3px 0;}/* FRONT PAGE - REFRESHING CITIES */#refreshing p {	margin: 50px 0 0 0;	font-size: 1.3em;}
+/* CSS for Refreshedinburgh.org by Nonimage.com - January 2009 */
+
+@import "reset.css";
+
+
+/* GLOBAL */
+
+body {
+	background: #396b0a url('../img/layout/mainbg.jpg') top center no-repeat;
+	font: 15px Helvetica, Arial, Verdana, sans-serif; 	
+	color: #fff;
+	border-top: 8px solid #a2b935;
+}
+
+
+/* LINKS */
+
+a img,:link img,:visited img { border:none }
+
+.clear {	
+	clear: both;
+}
+
+a, a:visited {
+	color: #fcea78;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {	
+	color: #fcf5cc;
+	text-decoration: underline;
+}
+
+ul.social-buttons li a {
+	color: #fff;
+}
+
+ul.social-buttons li a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+#footer a {
+	color: #fff;
+}
+
+
+/* HEADER */
+
+#header {
+	margin: 24px 0 0 0;
+}
+
+h1 {
+	margin: 0 0 0 -5px;
+	display: inline;
+	float: left;
+	width: 362px;
+}
+
+
+/* MENU */
+
+ul#main-menu {
+	display: inline;
+	float: right;
+	border-bottom: 3px solid #a2b935;
+	padding-bottom: 11px;
+	margin-top: 17px;
+} 
+
+ul#main-menu li {
+	display: inline;
+	float: right;
+	margin-left: 69px;
+}  
+
+ul#main-menu li.first {
+	margin-left: 0;
+}
+
+ul#main-menu li a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+
+/* MAIN STRUCTURE */
+
+#page {
+	width: 940px;
+	margin: 0 auto;
+}
+
+#main {
+	padding-top: 67px;
+	position: relative;
+}
+
+#content {
+	width: 520px;
+	display: inline;
+	float: left;
+}
+
+
+/* SIDEBAR */
+
+#sidebar {
+	width: 340px;
+	display: inline;
+	float: right;
+}
+
+#sidebar h2 {
+	font: 1.7em Cambria, Georgia, Times, serif; 	
+	margin: 25px 0 0.7em 0;
+	text-shadow: 2px 2px 2px #333;
+}
+
+#sidebar small {
+	font-size: 0.5em;
+}
+
+#sidebar ul li {
+	border-bottom: 1px solid #a2b935;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+
+/* SIDEBAR - SOCIAL AREA */
+
+#socialarea {
+	background: #a2b935 url('../img/layout/socialbg.jpg') top center no-repeat;
+	padding: 5px 18px 18px 18px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;	
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+#socialarea h2 {
+	font-size: 1.3em; 	
+	margin: 15px 0 0.6em 0;
+	color: #396b0a;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.mailaddress {
+	background: transparent url('../img/layout/signupbg-trans.png') top left no-repeat;
+	border: 0;
+	height: 32px;
+	padding: 10px 0 0 8px;
+	color: #396b0a;
+	font-size: 0.8em;
+	width: 217px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	/* Safari hack */
+	.mailaddress {padding: 2px 0 0 8px;}
+}
+
+.joinbutton {
+	background: transparent url('../img/layout/joinbutton-trans.png') top left no-repeat;
+	height: 32px;
+	border: 0;
+	font-weight: bold;
+	color: #fff;
+	margin: 2px 0 0 -5px;
+	width: 79px;
+	text-align: center;
+	font-size: 1em;
+}
+
+h2 span {
+	font-weight: normal;
+}
+
+ul.social-buttons {
+	width: 324px;
+	margin-left: -10px;
+}
+
+ul.social-buttons li {
+	display: inline;
+	float: left;
+	width: 125px;
+	height: 21px;
+	background-color: #5d951f;
+	margin: 0 0 10px 10px;
+	padding: 10px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #508617;
+}
+
+.social-icon {
+	margin: 0 10px -6px 0;
+}
+
+
+/* FOOTER */
+
+#footer {
+	width: 100%;
+	background-color: #a2b935;
+	padding: 9px 0;
+	font-size: 0.8em;
+	text-align: center;
+	margin-top: 30px;
+	color: #396b0a;
+}
+#footer p {
+	margin-bottom: 0.35em;
+	line-height: 1.4em;
+}
+
+
+/* MAIN TYPOGRAPHY */
+
+#content h2 {
+	font: 1.7em Cambria, Georgia, Times, serif; 	
+	margin-bottom: 1.1em;
+	text-shadow: 2px 2px 2px #333;
+}
+
+#content p {
+	margin-bottom: 1.1em;
+	line-height: 1.4em;
+	font-size: 1.1em;
+}
+
+
+/* FRONT PAGE - MAIN BODY TEXT */
+
+h2.what, h2.who {
+	margin-top: 60px;
+}
+
+
+/* FRONT PAGE - EVENTS */
+
+.vevent {
+	border-bottom: 1px solid #a2b935;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.date, h3.summary, .location {
+	float: left;
+	display: inline;
+}
+
+.date {
+	width: 140px;
+	margin-right: 20px;
+	font-size: 0.9em;
+}
+
+h3.summary {
+	width: 220px;
+	margin-right: 20px;
+}
+
+.location {
+}
+
+.seeall {
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+
+/* FRONT PAGE - MEMBERS LIST */
+
+ul#members-list {
+	width: 700px;
+	margin: 0 0 15px -20px;
+}
+
+ul#members-list li {
+	display: inline;
+	float: left;
+	width: 160px;
+	margin: 0 0 15px 20px;
+	font-size: 0.9em;
+}
+
+ul#members-list li a {
+	font-weight: normal;
+}
+
+.favicon {
+	margin: 0 10px -3px 0;
+}
+
+
+/* FRONT PAGE - REFRESHING CITIES */
+
+#refreshing p {
+	margin: 50px 0 0 0;
+	font-size: 1.3em;
+}
