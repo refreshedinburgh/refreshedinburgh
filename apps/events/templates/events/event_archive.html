@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% for event in upcoming_events %}
+		<h2><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
+		<p>{{ event.date|date }}</p>
+		<p>
+			{% if event.location.url %}
+				<a href="{{ event.url }}">{{ event.location.name }}</a>
+			{% else %}
+				{{ event.location.name }}
+			{% endif %}
+			{% if event.location.street %} — {{ event.location.street }}{% endif %}
+		</p>
+		{{ event.copy|safe }}
+		{% if event.upcoming_link %}
+			<p><a href="{{ event.upcoming_link }}" title="{{ event.name }} on Upcoming">See this event on Upcoming</a></p>
+		{% endif %}
+	{% endfor %}
+
+	{% if past_events %}
+		<h3>Past events</h3>
+		<ul>
+			{% for event in past_events %}
+				<li><a href="{{ event.get_absolute_url }}">{{ event.title }}</a>, {{ event.date|date }}, {{ event.location }}</hli>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}

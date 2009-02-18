@@ -1,12 +1,21 @@
+import datetime
+
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import RequestContext
-from django.views.generic.date_based import archive_year
+from django.views.generic.date_based import archive_index, archive_year
 
 from apps.events.models import Location, Event
 
 
 def event_archive(request):
-    pass
+    upcoming_events = Event.objects.filter(date__gte=datetime.date.today())
+    past_events = Event.objects.filter(date__lt=datetime.date.today())
+    context = {
+        'upcoming_events': upcoming_events,
+        'past_events': past_events,
+    }
+    return render_to_response('events/event_archive.html',
+        RequestContext(request, context))
 
 
 def event_year_archive(request, year):
