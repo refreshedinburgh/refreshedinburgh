@@ -2,7 +2,11 @@ import os
 import sys
 
 
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+SERVER_ENV = os.environ.get('SERVER_ENV', 'development')
+
+DEBUG = TEMPLATE_DEBUG = (SERVER_ENV == 'development')
+
+SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 
 # Import any private settings.
 from settings import private
@@ -26,12 +30,14 @@ ROOT_URLCONF = 'urls'
 USE_ETAGS = True
 
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'media/')
+MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
 
 TEMPLATE_DEBUG = DEBUG
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
     'django.core.context_processors.media',
+    'apps.core.context_processors.media_url',
 )
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT, 'templates/'),
@@ -57,5 +63,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'django.contrib.admin',
+
+    'apps.core',
     'apps.events',
 )

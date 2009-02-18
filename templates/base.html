@@ -1,1 +1,144 @@
-{% block content %}{% endblock %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+<head profile="http://gmpg.org/xfn/11">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Refresh Edinburgh</title>
+
+	<meta name="author" content="Andy Lobban, John Sutherland &amp; Matt Riggott" />
+	<meta name="description" content="Web community in Edinburgh, Scotland" />
+	<meta name="keywords" content="designer, developer, edinburgh, scotland, usability, web standards, technology" />
+
+	<link rel="stylesheet" type="text/css" media="screen, projection" href="{{ media_url }}css/core.css" />
+
+	<!--[if IE]><link rel="stylesheet" type="text/css" media="screen, projection" href="ie7.css"  /><![endif]-->
+
+	<link rel="alternate" type="application/rss+xml" title="Events feed" href="http://feeds.feedburner.com/refreshedinburgh/events" />
+	<link rel="alternate" type="application/rss+xml" title="Members' blogs feed" href="http://feeds.feedburner.com/refreshedinburgh/blogs" />
+
+	<link rel="icon" href="{{ media_url }}img/layout/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="{{ media_url }}img/layout/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="{{ media_url }}img/layout/iphone.png"/>
+
+</head>
+<body>
+
+	<div id="page">
+		<div id="header">
+			<h1><a href="{% url apps.core.views.home %}"><img src="{{ media_url }}img/layout/refresh_logo-trans.png" alt="Refresh Edinburgh" /></a></h1>
+			<ul id="main-menu">
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Members</a></li>
+				<li><a href="#">Events</a></li>
+				<li class="first"><a href="#">Home</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+
+		<div id="main">
+			{% block content %}
+				<div id="content">
+					<h2><strong>What</strong> is Refresh Edinburgh?</h2>
+					<p>Refresh Edinburgh is a community of web developers and designers interested in cutting-edge web technologies. We want to gather great minds, share our knowledge, promote local talent, and be more than we think we can be. We also want to drink and talk geek.</p>
+					<p>If you’re in or around Edinburgh and interested in attending community meetings sign-up to our mailing list and we’ll keep you informed.</p>
+
+					<h2 class="when"><strong>When</strong> is Refresh Edinburgh?</h2>
+					<div class="vevent">
+						<div class="date"><abbr class="dtstart" title="1998-03-12T08:30:00-05:00">12th Feb 09 8.30pm</abbr></div>
+						<h3 class="summary"><a class="url" href="http://www.whatever.com/">Event Title</a></h3>
+						<div class="location">Argent Hotel</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="vevent">
+						<div class="date"><abbr class="dtstart" title="1998-03-12T08:30:00-05:00">12th Feb 09 8.30pm</abbr></div>
+						<h3 class="summary"><a class="url" href="http://www.whatever.com/">Event Title</a></h3>
+						<div class="location">Argent Hotel</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="vevent">
+						<div class="date"><abbr class="dtstart" title="1998-03-12T08:30:00-05:00">12th Feb 09 8.30pm</abbr></div>
+						<h3 class="summary"><a class="url" href="http://www.whatever.com/">Event Title</a></h3>
+						<div class="location">Argent Hotel</div>
+						<div class="clear"></div>
+					</div>
+
+					<a href="#" class="seeall">See all events &raquo;</a>
+
+					<h2 class="who"><strong>Who</strong> is Refresh Edinburgh?</h2>
+					<ul id="members-list">
+						<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Member Name" width="16px" height="16px" /><a href="#">Member Name</a></li>
+						<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Member Name" width="16px" height="16px" /><a href="#">Member Name</a></li>
+						<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Member Name" width="16px" height="16px" /><a href="#">Member Name</a></li>
+						<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Member Name" width="16px" height="16px" /><a href="#">Member Name</a></li>
+						<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Member Name" width="16px" height="16px" /><a href="#">Member Name</a></li>
+						<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Member Name" width="16px" height="16px" /><a href="#">Member Name</a></li>
+					</ul>
+					<div class="clear"></div>
+
+					<a href="#" class="seeall">See all members &raquo;</a>
+
+					<div id="refreshing">
+						<p>Edinburgh is a <a href="http://www.refreshingcities.org/">Refreshing City</a>.</p>
+					</div>
+				</div>
+			{% endblock %}
+
+			{% block sidebar %}
+				<div id="sidebar">
+					<div id="socialarea">
+						<h2>Join our discussion list</h2>
+						<form method="post" action="#">
+							<input type="text" class="mailaddress" value="Enter Email Address..." onfocus="this.value=''" />
+							<input type="submit" class="joinbutton" value="Join" />
+						</form>
+
+						<h2>Refresh<span>Edinburgh</span> Elsewhere</h2>
+						<ul class="social-buttons">
+							<li><a href="#"><img src="{{ media_url }}img/layout/twitter.jpg" class="social-icon" alt="Twitter" />Twitter</a></li>
+							<li><a href="#"><img src="{{ media_url }}img/layout/lastfm.jpg" class="social-icon" alt="Last.fm" />Last.fm</a></li>
+							<li><a href="#"><img src="{{ media_url }}img/layout/flickr.jpg" class="social-icon" alt="Flickr" />Flickr</a></li>
+							<li><a href="#"><img src="{{ media_url }}img/layout/linkedin.jpg" class="social-icon" alt="LinkedIn" />LinkedIn</a></li>
+							<li><a href="#"><img src="{{ media_url }}img/layout/upcoming.jpg" class="social-icon" alt="Upcoming" />Upcoming</a></li>
+							<li><a href="#"><img src="{{ media_url }}img/layout/friendfeed.jpg" class="social-icon" alt="FriendFeed" />FriendFeed</a></li>
+						</ul>
+						<div class="clear"></div>
+
+						<h2>Subscribe</h2>
+						<ul class="social-buttons">
+							<li><a href="#"><img src="{{ media_url }}img/layout/feed-icon.jpg" class="social-icon" alt="Member Name" />Events RSS</a></li>
+							<li><a href="#"><img src="{{ media_url }}img/layout/ical-icon.jpg" class="social-icon" alt="Member Name" />Events iCal</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+
+					<h2>Latest <strong>Jobs</strong> <small>on our <a href="#">job board</a></small></h2>
+					<ul>
+						<li><a href="#">Title</a></li>
+						<li><a href="#">Title</a></li>
+						<li><a href="#">Title</a></li>
+						<li><a href="#">Title</a></li>
+					</ul>
+
+					<h2>Latest <strong>Posts</strong> <small>from our <a href="#">members</a></small></h2>
+					<ul>
+						<li><a href="#">Title</a></li>
+						<li><a href="#">Title</a></li>
+						<li><a href="#">Title</a></li>
+						<li><a href="#">Title</a></li>
+					</ul>
+				</div>
+			{% endblock %}
+
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<p>Copyright &copy; 2006-2009 Refresh Edinburgh. Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=refreshedinburgh.org">CSS</a>. Designed by <a href="http://www.nonimage.com">Nonimage</a>. Maintained by <a href="http://sneeu.com">John Sutherland</a>.</p>
+	</div>
+
+</body>
+</html>
