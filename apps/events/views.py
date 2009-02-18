@@ -8,9 +8,10 @@ def event_archive(request):
 
 
 def event_year_archive(request, year):
-    return archive_year(request, year=year, queryset=Event.objects.all(),
-        date_field='date', template_name='events/event_year_archive.html',
-        allow_empty=False)
+    return archive_year(request, year=year,
+        queryset=Event.objects.all().select_related(), date_field='date',
+        template_name='events/event_year_archive.html', allow_empty=False,
+        make_object_list=True)
 
 
 def event_detail(request, year, slug):

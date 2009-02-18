@@ -1,6 +1,7 @@
 import datetime
 
 from django.db import models
+from django.db.models import permalink
 
 
 class Location(models.Model):
@@ -35,3 +36,8 @@ class Event(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    @permalink
+    def get_absolute_url(self):
+        from views import event_detail
+        return (event_detail, (self.date.year, self.slug),)
