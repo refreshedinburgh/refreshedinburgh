@@ -6,7 +6,7 @@
 	{% get_latest_events %}
 	{% for event in event_list %}
 		<div class="vevent">
-			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|date }}</abbr></div>
+			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time }}, {{ event.date|date }}</abbr></div>
 			<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
 			<div class="location">{{ event.location }}</div>
 			<div class="clear"></div>

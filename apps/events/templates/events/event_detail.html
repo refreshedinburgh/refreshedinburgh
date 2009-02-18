@@ -3,7 +3,7 @@
 {% block content %}
 	<h2>{{ event.title }}</h2>
 	<p>
-		{{ event.date|date }} —
+		{{ event.date|time }}, {{ event.date|date }} —
 		{% if event.location.url %}
 			<a href="{{ event.url }}">{{ event.location.name }}</a>
 		{% else %}
