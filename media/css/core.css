@@ -148,7 +148,9 @@ ul#main-menu li a:hover {
 	font-weight: bold;
 	text-shadow: none;
 }
-
+#socialarea form label {
+	display: none;
+}
 .mailaddress {
 	background: transparent url('../img/layout/signupbg-trans.png') top left no-repeat;
 	border: 0;
@@ -245,7 +247,7 @@ ul.social-buttons li {
 
 /* FRONT PAGE - MAIN BODY TEXT */
 
-h2.what, h2.who {
+h2.when, h2.who {
 	margin-top: 60px;
 }
 
