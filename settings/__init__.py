@@ -39,6 +39,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
     'django.core.context_processors.media',
     'apps.core.context_processors.media_url',
+    'apps.core.context_processors.current_site',
 )
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT, 'templates/'),

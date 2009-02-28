@@ -63,8 +63,8 @@
 
 						<h2>Subscribe</h2>
 						<ul class="social-buttons">
-							<li><a href="#"><img src="{{ media_url }}img/layout/feed-icon.jpg" class="social-icon" alt="Member Name" />Events RSS</a></li>
-							<li><a href="#"><img src="{{ media_url }}img/layout/ical-icon.jpg" class="social-icon" alt="Member Name" />Events iCal</a></li>
+							<li><a href="/feeds/upcoming/"><img src="{{ media_url }}img/layout/feed-icon.jpg" class="social-icon" alt="Member Name" />Events RSS</a></li>
+							{% if current_site %}<li><a href="http://suda.co.uk/projects/microformats/hcalendar/get-cal.php?uri=http://{{ current_site.domain }}{% url events_event_archive %}"><img src="{{ media_url }}img/layout/ical-icon.jpg" class="social-icon" alt="Member Name" />Events iCal</a></li>{% endif %}
 						</ul>
 						<div class="clear"></div>
 					</div>

@@ -4,14 +4,13 @@ from django.contrib import admin
 
 from apps.events.feeds import UpcomingEvents
 
+
+admin.autodiscover()
+
+
 feeds = {
     'upcoming': UpcomingEvents,
 }
-
-import settings
-
-
-admin.autodiscover()
 
 
 urlpatterns = patterns('',
