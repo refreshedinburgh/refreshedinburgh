@@ -6,6 +6,7 @@ SERVER_ENV = os.environ.get('SERVER_ENV', 'development')
 
 DEBUG = TEMPLATE_DEBUG = (SERVER_ENV == 'development')
 
+SITE_ID = 1
 SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 
 # Import any private settings.

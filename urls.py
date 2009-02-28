@@ -1,6 +1,12 @@
-from django.conf.urls.defaults import handler404, handler500, include, patterns
+from django.conf.urls.defaults import *
 from django.conf import settings
 from django.contrib import admin
+
+from apps.events.feeds import UpcomingEvents
+
+feeds = {
+    'upcoming': UpcomingEvents,
+}
 
 import settings
 
@@ -9,9 +15,11 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    (r'^', include('apps.core.urls')),
-    (r'^events/', include('apps.events.urls')),
-    (r'^admin/', include(admin.site.urls)),
+    url(r'^', include('apps.core.urls')),
+    url(r'^events/', include('apps.events.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
+        {'feed_dict': feeds}),
 )
 
 
