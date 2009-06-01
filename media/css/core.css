@@ -53,7 +53,7 @@ ul.social-buttons li a:hover {
 }
 
 h1 {
-	margin: 0 0 0 -5px;
+	margin: 5px 0 0 0px;
 	display: inline;
 	float: left;
 	width: 362px;
@@ -245,6 +245,8 @@ ul.social-buttons li {
 }
 
 
+
+
 /* FRONT PAGE - MAIN BODY TEXT */
 
 h2.when, h2.who {
@@ -315,3 +317,44 @@ ul#members-list li a {
 	margin: 50px 0 0 0;
 	font-size: 1.3em;
 }
+
+
+/* EVENTS - INDEX */
+
+h2.pastevents {
+	margin-top: 60px;
+	}
+	
+
+/* EVENTS - SINGLE EVENT */
+
+.eventspage h2 a {
+	color: #fff;
+	}
+	
+.eventspage h2 a:hover {
+	text-decoration: none;
+	}
+
+.eventspage .date {
+	width: 180px;
+	font-size: 1em;
+	display: inline;
+	float: left;
+	}
+	
+.eventspage .location {
+	float: right;
+	}
+	
+.eventmetadata {
+	margin-top: -10px;
+	border-bottom: 1px solid #a2b935;
+	border-top: 1px solid #a2b935;
+	padding: 10px 0;
+	margin-bottom: 15px;
+	}
+	
+a.upcominglink {
+	font-size: 0.9em;
+	}

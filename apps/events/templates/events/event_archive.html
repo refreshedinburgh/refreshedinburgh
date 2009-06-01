@@ -1,31 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
+	<h2 class="sectionheader">Upcoming Events</h2>
 	{% for event in upcoming_events %}
-		<h2><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
-		<p>
-			{{ event.date|time }}, {{ event.date|date }} —
-			{% if event.location.url %}
-				<a href="{{ event.url }}">{{ event.location.name }}</a>
-			{% else %}
-				{{ event.location.name }}
-			{% endif %}
-			{% if event.location.street %} — {{ event.location.street }}{% endif %}
-		</p>
-		{{ event.copy|safe }}
-		{% if event.upcoming_link %}
-			<p><a href="{{ event.upcoming_link }}" title="{{ event.name }} on Upcoming">See this event on Upcoming</a></p>
-		{% endif %}
+		<div class="vevent eventsindex">
+			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time }}, {{ event.date|date }}</abbr></div>
+			<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
+			<div class="location">{{ event.location }}</div>
+			<div class="clear"></div>
+		</div>
 	{% endfor %}
 
 	{% if past_events %}
-		<div id="pastevents">
-			<h3>Past events</h3>
-			<ul>
+			<h2 class="pastevents">Past Events</h2>
 				{% for event in past_events %}
-					<li><a href="{{ event.get_absolute_url }}">{{ event.title }}</a>, {{ event.date|time }}, {{ event.date|date }}, {{ event.location }}</hli>
-				{% endfor %}
-			</ul>
+			<div class="vevent eventsindex">
+			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time }}, {{ event.date|date }}</abbr></div>
+			<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
+			<div class="location">{{ event.location }}</div>
+			<div class="clear"></div>
 		</div>
+				{% endfor %}
 	{% endif %}
 {% endblock %}

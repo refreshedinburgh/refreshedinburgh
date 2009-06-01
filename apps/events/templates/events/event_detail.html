@@ -1,18 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h2>{{ event.title }}</h2>
-	<p>
-		{{ event.date|time }}, {{ event.date|date }} —
+	<div class="vevent eventspage">
+		<h2 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
+		<div class="eventmetadata">
+		<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time }}, {{ event.date|date }}</abbr></div>
+		<div class="location">
 		{% if event.location.url %}
 			<a href="{{ event.url }}">{{ event.location.name }}</a>
 		{% else %}
 			{{ event.location.name }}
 		{% endif %}
 		{% if event.location.street %} — {{ event.location.street }}{% endif %}
-	</p>
+		</div>
+		<div class="clear"></div>
+		</div>
+	<p class="description">
 	{{ event.copy|safe }}
+	</p>
 	{% if event.upcoming_link %}
-		<p><a href="{{ event.upcoming_link }}" title="{{ event.name }} on Upcoming">See this event on Upcoming</a></p>
+		<p><a class="upcominglink" href="{{ event.upcoming_link }}" title="{{ event.name }} on Upcoming">Confirm your attendance for this event on Upcoming</a></p>
 	{% endif %}
+	</div>
 {% endblock %}
