@@ -4,7 +4,7 @@
 	<h2 class="sectionheader">Upcoming Events</h2>
 	{% for event in upcoming_events %}
 		<div class="vevent eventsindex">
-			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time }}, {{ event.date|date }}</abbr></div>
+			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time|lower }}, {{ event.date|date }}</abbr></div>
 			<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
 			<div class="location">{{ event.location }}</div>
 			<div class="clear"></div>
@@ -13,13 +13,13 @@
 
 	{% if past_events %}
 			<h2 class="pastevents">Past Events</h2>
-				{% for event in past_events %}
-			<div class="vevent eventsindex">
-			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time }}, {{ event.date|date }}</abbr></div>
-			<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
-			<div class="location">{{ event.location }}</div>
-			<div class="clear"></div>
-		</div>
-				{% endfor %}
+			{% for event in past_events %}
+				<div class="vevent eventsindex">
+					<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time|lower }}, {{ event.date|date }}</abbr></div>
+					<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
+					<div class="location">{{ event.location }}</div>
+					<div class="clear"></div>
+				</div>
+			{% endfor %}
 	{% endif %}
 {% endblock %}

@@ -5,7 +5,7 @@
 	{% for event in object_list %}
 		<h2><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
 		<p>
-			{{ event.date|time }}, {{ event.date|date }} —
+			{{ event.date|time|lower }}, {{ event.date|date }} —
 			{% if event.location.url %}
 				<a href="{{ event.url }}">{{ event.location.name }}</a>
 			{% else %}
