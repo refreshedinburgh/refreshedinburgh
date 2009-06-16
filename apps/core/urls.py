@@ -1,8 +1,10 @@
-from django.conf.urls.defaults import include, patterns
+from django.conf.urls.defaults import include, patterns, url
 
 import views
 
 
 urlpatterns = patterns('',
-    (r'^$', views.home),
+    url(r'^$', views.home),
+    url(r'^members/$', views.members, name='member_list'),
+    url(r'^jobs/$', views.jobs, name='job_list'),
 )

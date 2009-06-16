@@ -2,23 +2,8 @@
 {% load events %}
 
 {% block content %}
-	<h2 class="what"><strong>What</strong> is Refresh Edinburgh?</h2>
-	<p>Refresh Edinburgh is a community of web developers and designers interested in cutting-edge web technologies. We want to gather great minds, share our knowledge, promote local talent, and be more than we think we can be. We also want to drink and talk geek.</p>
-	<p>If you’re in or around Edinburgh and interested in attending community meetings, sign up to our mailing list and we’ll keep you informed.</p>
-
-	<h2 class="when"><strong>When</strong> is Refresh Edinburgh?</h2>
-	{% get_latest_events %}
-	{% for event in event_list %}
-		<div class="vevent">
-			<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time|lower }}, {{ event.date|date }}</abbr></div>
-			<h3 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
-			<div class="location">{{ event.location }}</div>
-			<div class="clear"></div>
-		</div>
-	{% endfor %}
-	<a href="{% url events_event_archive %}" class="seeall">See all events &raquo;</a>
-
 	<h2 class="who"><strong>Who</strong> is Refresh Edinburgh?</h2>
+
 	<ul id="members-list">
 		<li><img src="{{ media_url }}img/layout/favicon.ico" class="favicon" alt="Andy Durdin" width="16px" height="16px" /><a href="http://andy.durdin.net/">Andy Durdin</a></li>
 		<li><img src="http://www.nonimage.com/images/favicon.ico" class="favicon" alt="Andy Lobban" width="16px" height="16px" /><a href="http://www.nonimage.com/">Andy Lobban</a></li>
@@ -35,8 +20,5 @@
 
 	<div class="clear"></div>
 
-
-	<div id="refreshing">
-		<p>Edinburgh is a <a href="http://www.refreshingcities.org/">Refreshing City</a>.</p>
-	</div>
+	<p>If you've been to Refresh Edinburgh and like to be added to this list, <a href="mailto:john+members@sneeu.com?subject=Refresh Members">send an email to John</a>.</p>
 {% endblock %}
