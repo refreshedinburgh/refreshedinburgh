@@ -7,7 +7,7 @@ register = Library()
 
 class LatestEventsNode(Node):
     def render(self, context):
-        context['event_list'] = Event.objects.all().order_by('date')[:3]
+        context['event_list'] = reversed(Event.objects.all().order_by('-date')[:3])
         return ''
 
 
