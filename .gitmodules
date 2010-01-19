@@ -1,3 +1,6 @@
 [submodule "vendor/django-typogrify"]
 	path = vendor/django-typogrify
 	url = git://github.com/clones/django-typogrify.git
+[submodule "vendor/django"]
+	path = vendor/django
+	url = git://github.com/django/django.git

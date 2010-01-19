@@ -24,7 +24,7 @@ class Location(models.Model):
 
 class Event(models.Model):
     title = models.CharField(max_length=64)
-    slug = models.SlugField(unique_for_year=True)
+    slug = models.SlugField(unique_for_year='date')
     date = models.DateTimeField(unique=True)
     location = models.ForeignKey(Location)
     copy = models.TextField()
