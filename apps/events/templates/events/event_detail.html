@@ -7,7 +7,7 @@
 		<div class="date"><abbr class="dtstart" title="{{ event.date|date:"Ymd" }}T{{ event.date|date:"Gi" }}">{{ event.date|time|lower }}, {{ event.date|date }}</abbr></div>
 		<div class="location">
 		{% if event.location.url %}
-			<a href="{{ event.url }}">{{ event.location.name }}</a>
+			<a href="{{ event.location.url }}">{{ event.location.name }}</a>
 		{% else %}
 			{{ event.location.name }}
 		{% endif %}
