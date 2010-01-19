@@ -18,7 +18,7 @@ for setting in dir(private):
 MANAGERS = ADMINS
 
 TIME_ZONE = 'Europe/London'
-DATE_FORMAT = 'j F y'
+DATE_FORMAT = 'j N y'
 TIME_FORMAT = 'g:iA'
 DATETIME_FORMAT = ', '.join([TIME_FORMAT, DATE_FORMAT])
 MONTH_DAY_FORMAT = 'j F'

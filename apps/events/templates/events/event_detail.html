@@ -4,7 +4,7 @@
 	<div class="vevent eventspage">
 		<h2 class="summary"><a class="url" href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
 		<div class="eventmetadata">
-		<div class="date"><abbr class="dtstart" title="{{ event.date }}">{{ event.date|time|lower }}, {{ event.date|date }}</abbr></div>
+		<div class="date"><abbr class="dtstart" title="{{ event.date|date:"Ymd" }}T{{ event.date|date:"Gi" }}">{{ event.date|time|lower }}, {{ event.date|date }}</abbr></div>
 		<div class="location">
 		{% if event.location.url %}
 			<a href="{{ event.url }}">{{ event.location.name }}</a>
