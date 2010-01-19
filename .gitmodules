@@ -1,6 +1,3 @@
-[submodule "vendor/django"]
-	path = vendor/django
-	url = git://github.com/brosner/django.git
 [submodule "vendor/django-typogrify"]
 	path = vendor/django-typogrify
 	url = git://github.com/clones/django-typogrify.git
